@@ -34,6 +34,10 @@ puts t.validate(t.token, username, password, 2)? 'valid' : 'not valid'
 
 == INSTALL:
 
+$ sudo gem install dsparling-access_token
+
+or 
+
 $ git clone git://github.com/dsparling/access_token.git
 $ cd access_token
 $ sudo ruby setup.rb
