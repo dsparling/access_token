@@ -1,0 +1,7 @@
+
+For more information on access_token, see http://access_token.rubyforge.org
+
+NOTE: Change this information in PostInstall.txt 
+You can also delete it if you don't want it.
+
+
