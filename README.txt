@@ -1,26 +1,39 @@
 = access_token
 
-* FIX (url)
 
 == DESCRIPTION:
 
-FIX (describe your package)
+Generate and validate simple time-based access token
 
 == FEATURES/PROBLEMS:
 
-* FIX (list of features or problems)
+TODO: Multiple time formats
+      1/100th seconds
+      Use ARGV for bin script for username and password
 
 == SYNOPSIS:
 
-  FIX (code sample of usage)
+#!/usr/bin/env ruby
+require 'rubygems'
+require 'access_token'
+
+username = 'doug'
+password = 'secret'
+
+t = AccessToken::Token.new(username, password)
+puts t.token
+
+puts t.validate(t.token, username, password)? 'valid' : 'not valid'
+puts t.validate(t.token, username, password, 5)? 'valid' : 'not valid'
+sleep 3
+puts t.validate(t.token, username, password, 2)? 'valid' : 'not valid'
+
 
 == REQUIREMENTS:
 
-* FIX (list of requirements)
 
 == INSTALL:
 
-* FIX (sudo gem install, anything else)
 
 == LICENSE:
 
