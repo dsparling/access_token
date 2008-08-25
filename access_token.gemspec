@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name     = "access_token"
-  s.version  = "0.0.3"
+  s.version  = "0.0.4"
   s.date     = "2008-08-24"
   s.summary  = "Generate and validate simple time-based access token"
   s.email    = "scriptrunner.com@gmail.com"
@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.has_rdoc = true
   s.authors  = ["Doug Sparling"]
   s.files    = ["History.txt", 
-                "License.txt"
+                "License.txt",
 		"Manifest.txt", 
 		"README.txt", 
 		"Rakefile", 
