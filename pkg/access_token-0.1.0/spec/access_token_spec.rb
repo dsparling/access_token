@@ -5,7 +5,7 @@ require File.dirname(__FILE__) + '/spec_helper.rb'
 describe "AccessToken" do
 
   before(:each) do
-    @t = AccessToken::Token.new('doug','secret')
+    @t = AccessToken::Token.new('doug','secret','md5')
   end
 
   it "should require username" do
@@ -20,20 +20,8 @@ describe "AccessToken" do
     @t.timestamp.should >= Time.now.to_i
   end
 
-  it "should generate key concatenating timestamp, username, and password" do
-    @t.key.should == @t.timestamp.to_s + @t.username + @t.password
-  end
-
-  it "should generate md5 of key" do
-    @t.key_md5.length.should == 32
-  end
-
-  it "should generate base64 of md5" do
-    @t.key_base64.length.should == 44 
-  end
-
   it "should generate valid token" do
-    @t.token.length.should == 55
+    @t.token.length.should == 35 #39
     @t.validate(@t.token, @t.username, @t.password).should == true
   end
 
