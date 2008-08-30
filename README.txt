@@ -23,9 +23,13 @@ password = 'secret'
 t = AccessToken::Token.new(username, password)
 puts t.token
 
+# token should be valid 
 puts t.validate(t.token, username, password)? 'valid' : 'not valid'
+# token should be valid for 5 seconds 
 puts t.validate(t.token, username, password, 5)? 'valid' : 'not valid'
+# wait 3 seconds 
 sleep 3
+# token should be invalid if it's only valid for 2 seconds
 puts t.validate(t.token, username, password, 2)? 'valid' : 'not valid'
 
 
@@ -46,7 +50,7 @@ $ sudo ruby setup.rb
 
 (The MIT License)
 
-Copyright (c) 2008 FIXME full name
+Copyright (c) 2008 doug sparling 
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

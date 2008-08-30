@@ -1,10 +1,10 @@
 Gem::Specification.new do |s|
   s.name = %q{access_token}
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["doug sparling"]
-  s.date = %q{2008-08-25}
+  s.date = %q{2008-08-30}
   s.default_executable = %q{generate_token.rb}
   s.description = %q{Create and check simple time-based access token}
   s.email = ["doug.sparling@gmail.com"]
