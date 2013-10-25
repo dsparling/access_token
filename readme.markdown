@@ -1,18 +1,17 @@
-= access_token
+# access_token
 
-
-== DESCRIPTION:
+## DESCRIPTION:
 
 Generate and validate simple time-based access token
 
-== FEATURES/PROBLEMS:
+## FEATURES/PROBLEMS:
 
 TODO: Multiple time formats
       1/100th seconds
       Use ARGV for bin script for username and password
 
-== SYNOPSIS:
-
+## SYNOPSIS:
+```ruby
 #!/usr/bin/env ruby
 require 'rubygems'
 require 'access_token'
@@ -27,30 +26,25 @@ puts t.token
 puts t.validate(t.token, username, password)? 'valid' : 'not valid'
 # token should be valid for 5 seconds 
 puts t.validate(t.token, username, password, 5)? 'valid' : 'not valid'
-# wait 3 seconds 
+# wait 3 seconds
 sleep 3
 # token should be invalid if it's only valid for 2 seconds
 puts t.validate(t.token, username, password, 2)? 'valid' : 'not valid'
+```
 
+## Version history and stuff
 
-== REQUIREMENTS:
+* **0.0.1**: initial release. (2008).
+* **0.0.7**: changed to digest instead of hexdigest, added sha1 as default (md5 as option).
+* **0.1.0**: refactored.
+* **0.1.1**: updated documentation,
+* **0.9.0**: updated to use gemspec/expect syntax/cleanup of some cruft.
 
-
-== INSTALL:
-
-$ sudo gem install dsparling-access_token
-
-or 
-
-$ git clone git://github.com/dsparling/access_token.git
-$ cd access_token
-$ sudo ruby setup.rb
-
-== LICENSE:
+## LICENSE:
 
 (The MIT License)
 
-Copyright (c) 2008 doug sparling 
+Copyright (c) 2008-2013 Doug Sparling
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
