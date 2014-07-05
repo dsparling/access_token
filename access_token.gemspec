@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.description        = "Create and check simple time-based access token"
   s.summary            = "Create and check simple time-based access token"
   s.email              = ["doug.sparling@gmail.com"]
-  s.homepage           = "https://github.com/dsparling/jumble"
+  s.homepage           = "https://github.com/dsparling/access_token"
   s.default_executable = "generate_token.rb"
   s.executables = ["generate_token.rb"]
 
