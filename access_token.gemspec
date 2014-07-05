@@ -24,6 +24,6 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  s.add_development_dependency('rspec')
-  s.add_development_dependency('simplecov')
+  s.add_development_dependency('rspec', '~>3.0.0')
+  s.add_development_dependency('simplecov', '~> 0.7.1')
 end
