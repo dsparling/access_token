@@ -39,12 +39,13 @@ puts t.validate(t.token, username, password, 2)? 'valid' : 'not valid'
 * **0.1.0**: refactored.
 * **0.1.1**: updated documentation,
 * **0.9.0**: updated to use gemspec/expect syntax/cleanup of some cruft.
+* **1.0.1**: updated to use rspec 3, added specs
 
 ## LICENSE:
 
 (The MIT License)
 
-Copyright (c) 2008-2013 Doug Sparling
+Copyright (c) 2008-2014 Doug Sparling
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

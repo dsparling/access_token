@@ -30,7 +30,7 @@ module AccessToken
     def validate(token, username, password, secs=nil)
       token_timestamp = token.split(':')[0]
       unless secs.nil?
-        return false if token_timestamp.to_i - Time.now.to_i > secs
+        return false if Time.now.to_i - token_timestamp.to_i > secs
       end
       token2 = generate_token(token_timestamp, username, password)
       token == token2 ? true : false

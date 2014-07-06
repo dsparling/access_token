@@ -53,9 +53,9 @@ describe "AccessToken" do
       @t_sha1 = AccessToken::Token.new('doug','secret','sha1')
     end
 
-    it "should consider token after requested time period" do
+    it "should consider token invalid after requested time period" do
       sleep 2
-      expect(@t_sha1.validate(@t_sha1.token, @t_sha1.username, @t_sha1.password, 1)).to eq(true)
+      expect(@t_sha1.validate(@t_sha1.token, @t_sha1.username, @t_sha1.password, 1)).to eq(false)
     end
   end
 
