@@ -45,7 +45,7 @@ puts t.validate(t.token, username, password, 2)? 'valid' : 'not valid'
 
 (The MIT License)
 
-Copyright (c) 2008-2014 Doug Sparling
+Copyright (c) 2008-2015 Doug Sparling
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
